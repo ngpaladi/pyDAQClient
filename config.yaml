@@ -1,0 +1,58 @@
+name: DAQ Client
+backend: Generic Backend Template
+graph:
+  window: 60
+track_spills: true
+wait_for_spill: true
+display_character_width: 32
+time_display_format: '%d %b %Y %H:%M:%S'
+debug_mode: false
+log_depth: 100
+web:
+  host: 127.0.0.1
+  port: 5000
+  show_spill_count: false
+  buttons:
+    connect_backend:
+      tooltip: Connect to Backend
+      bootstrap_icon: hdd-network
+    configure:
+      tooltip: Configure
+      bootstrap_icon: gear
+    download:
+      tooltip: Download
+      bootstrap_icon: cloud-arrow-down
+    prestart:
+      tooltip: Prestart
+      bootstrap_icon: file-earmark-play
+    start:
+      tooltip: Start Run
+      bootstrap_icon: play-circle
+    pause:
+      tooltip: Pause Run
+      bootstrap_icon: pause-circle
+    stop:
+      tooltip: End Run
+      bootstrap_icon: stop-circle
+    reset:
+      tooltip: Reset
+      bootstrap_icon: arrow-counterclockwise
+    autopilot:
+      tooltip: Autopilot
+      bootstrap_icon: airplane
+autopilot:
+  enable: true
+  run_types:
+  - test
+  - physics
+  - cosmics
+  default_user: user
+  default_run_type: physics
+  default_run_notes: ''
+  default_autorestart: true
+  default_run_length: 120
+
+  
+
+
+
